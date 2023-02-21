@@ -1,0 +1,59 @@
+
+.App{
+ height: inherit;
+ display: flex;
+ flex-direction: row;
+}
+
+.app_outlet{
+  height: inherit;
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_sideBar{
+
+  /* !!PADDING */
+padding:4rem;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: #151414;
+color: #c7c7c7;
+font-family: 'Source Sans Pro', sans-serif;
+font-style: normal;
+
+
+
+}
+
+.app_linksContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  letter-spacing: 0.2rem;
+}
+
+a{
+  text-decoration: none;
+  
+
+  color: #c7c7c7
+}
+a:hover{
+  color: white;
+}
+
+/* .custom { */
+  /* The second value here is a fallback. */
+  /* cursor: url(images/my-cursor.png), auto; */
+
+  /* You may need coordinates to adjust the pointer
+     for example, the custom cursor is circular and you want
+     the middle to be where you click */
+  /* cursor: url(target.svg) 15 15, move; */
+/* } */
