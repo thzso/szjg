@@ -9,6 +9,7 @@ app.use(cors())
 // app.options('*', cors());
 app.use(express.static('./assets/images/etchings'))
 app.use(express.static('./assets/images/digital'))
+app.use(express.static('./assets/images/comics'))
 
 
 app.get('/', (req, res)=> {
@@ -24,7 +25,13 @@ app.get('/a', (req, res) =>{
 app.get('/d', (req, res) =>{
 
   const data = JSON.parse(fs.readFileSync("./assets/digital.json"))
-console.log(data)
+
+  res.send(data)
+} )
+app.get('/c', (req, res) =>{
+
+  const data = JSON.parse(fs.readFileSync("./assets/comics.json"))
+
   res.send(data)
 } )
 

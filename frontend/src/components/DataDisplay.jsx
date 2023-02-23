@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-// import getData from "../../getdata"
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import Popup from "./Popup";
 import { Skeleton } from "@mui/material";
@@ -7,23 +6,16 @@ import { Skeleton } from "@mui/material";
 const DataDisplay = ({ urlEnding }) => {
   //mi az a usecallback? mi ez? :https://devtrium.com/posts/async-functions-useeffect
 
-  const [isLoading, setIsloading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
   const [open, setOpen] = useState(false);
-  
-
   const [clickedImage, setClickedImage] = useState({});
-
-  console.log(isLoading);
+  const [loadedImages, setLoadedImages] = useState([]);
+  const imgWrapperRef = useRef(null);
 
   useEffect(() => {
     const getData = async () => {
-      
       let res = await axios.get(`http://localhost:8080/${urlEnding}`);
-      console.log(res.request.status);
-      // if (res.request.status === 200) {
-      //   setIsloading(false);
-      // }
       setData(res.data);
     };
 
@@ -31,31 +23,54 @@ const DataDisplay = ({ urlEnding }) => {
   }, []);
 
   const handleClick = (image) => {
-    console.log("clicked");
-    console.log(image);
     setClickedImage(image);
     setOpen(!open);
   };
 
-{/* <Skeleton variant="rectangular" key={i}>  </Skeleton> */}
+  const handleOnload = (filename) => {
+    setLoadedImages((prev) => [...prev, filename]);
+  };
+
+  useEffect(() => {
+    if (data.length === loadedImages.length && data.length !== 0) {
+      console.log(
+        "loadedimages dependencys useEffectben: data.length : ",
+        data.length,
+        "loadedImageslength: ",
+        loadedImages.length
+      );
+      setIsLoading(false);
+    }
+  }, [loadedImages]);
 
   return (
-    <div className="dataDisplayContainer">
-      {data.map((image, i) =>
+    <div ref={imgWrapperRef} className="dataDisplayContainer">
+      {data.map((image, i) => (
+        <div
+          key={i}
+          className="imageContainer"
+          onClick={(e) => handleClick(image)}
+        >
+          {isLoading && (
+            <Skeleton variant="rectangular">
+              <img
+                className="images"
+                src={`http://localhost:8080/${image.filename}`}
+                alt=""
+              />
+            </Skeleton>
+          )}
 
-          <div
-            key={i}
-            className="imageContainer"
-            onClick={(e) => handleClick(image)}
-          >
-            <img
-              className="images"
-              src={`http://localhost:8080/${image.filename}`}
-              alt=""
-            />
-          </div>
-        
-      )}
+          <img
+            style={{ display: isLoading ? "none" : "block" }}
+            // ref={ref}
+            onLoad={() => handleOnload(image.filename)}
+            className="images"
+            src={`http://localhost:8080/${image.filename}`}
+            alt=""
+          />
+        </div>
+      ))}
 
       {open && <Popup {...{ clickedImage, setOpen, open }} />}
     </div>
