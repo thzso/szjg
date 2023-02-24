@@ -11,7 +11,6 @@ const DataDisplay = ({ urlEnding }) => {
   const [open, setOpen] = useState(false);
   const [clickedImage, setClickedImage] = useState({});
   const [loadedImages, setLoadedImages] = useState([]);
-  const imgWrapperRef = useRef(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -33,18 +32,12 @@ const DataDisplay = ({ urlEnding }) => {
 
   useEffect(() => {
     if (data.length === loadedImages.length && data.length !== 0) {
-      console.log(
-        "loadedimages dependencys useEffectben: data.length : ",
-        data.length,
-        "loadedImageslength: ",
-        loadedImages.length
-      );
       setIsLoading(false);
     }
   }, [loadedImages]);
 
   return (
-    <div ref={imgWrapperRef} className="dataDisplayContainer">
+    <div className="dataDisplayContainer">
       {data.map((image, i) => (
         <div
           key={i}
@@ -63,7 +56,6 @@ const DataDisplay = ({ urlEnding }) => {
 
           <img
             style={{ display: isLoading ? "none" : "block" }}
-            // ref={ref}
             onLoad={() => handleOnload(image.filename)}
             className="images"
             src={`http://localhost:8080/${image.filename}`}

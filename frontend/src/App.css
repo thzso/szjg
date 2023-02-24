@@ -23,14 +23,15 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-background-color: #151414;
+/* background-color: #151414; */
 background-color: #000000f0;
 color: #c7c7c7;
 font-family: 'Source Sans Pro', sans-serif;
 font-style: normal;
 
-
-
+}
+.active{
+  color: white;
 }
 
 .app_linksContainer{

@@ -1,0 +1,29 @@
+
+#container{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.cards{
+  border: 1px solid grey;
+}
+
+.textUrls{
+ 
+  flex-direction: column;
+}
+
+.icons, .textUrls{
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.icons{
+  justify-content: center;
+}
+
+h3{
+  text-align: center;
+  margin: 0.2rem;
+}

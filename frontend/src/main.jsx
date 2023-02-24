@@ -8,6 +8,7 @@ import Etchings from './routes/Etchings.jsx'
 import Paintings from './routes/Paintings'
 import Digital from './routes/Digital'
 import Comics from './routes/Comics'
+import LinksContacts from './routes/LinksContacts'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -35,6 +36,10 @@ const router = createBrowserRouter([{
     {
       path:"/comics",
       element: <Comics/>
+    },
+    {
+      path:"/links&contacts",
+      element: <LinksContacts/>
     }
   ]
 }])
