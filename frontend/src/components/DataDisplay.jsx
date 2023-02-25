@@ -3,6 +3,7 @@ import axios from "axios";
 import Popup from "./Popup";
 import { Skeleton } from "@mui/material";
 import styles from "./DataDisplay.module.css"
+import { useOutletContext } from "react-router-dom";
 
 const DataDisplay = ({ urlEnding }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -10,6 +11,9 @@ const DataDisplay = ({ urlEnding }) => {
   const [open, setOpen] = useState(false);
   const [clickedImage, setClickedImage] = useState({});
   const [loadedImages, setLoadedImages] = useState([]);
+
+  const {windowWidth} = useOutletContext()
+ 
 
   useEffect(() => {
     const getData = async () => {
@@ -63,7 +67,7 @@ const DataDisplay = ({ urlEnding }) => {
         </div>
       ))}
 
-      {open && <Popup {...{ clickedImage, setOpen, open }} />}
+      {( windowWidth > 767 && open) && <Popup {...{ clickedImage, setOpen, open}} />}
     </div>
   );
 };

@@ -20,17 +20,17 @@ const LinksContacts = () => {
               "https://twitter.com/j_gergely?fbclid=IwAR0TL8pmxq6FaWOJgz4SPKvfu7SO-0eI2onlDOrfmWwS1Obwdpn0JnUST7U"
             }
           >
-            <TwitterIcon />
+            <TwitterIcon sx={{fontSize: "3rem", color: "#1d9bf0"}}/>
           </ExternalLink>
           <ExternalLink url={"https://www.facebook.com/szabo.gergely.925"}>
-            <FacebookIcon />
+            <FacebookIcon sx={{fontSize: "3rem", color: "#1d9bf0"}} />
           </ExternalLink>
           <ExternalLink
             url={
               "https://www.instagram.com/szabojgergely/?fbclid=IwAR3qEKzyhhfKcs5c7IwnAoT4X8xkBW254C1SXLcKA8ZL4_U-vibkp-UacEs"
             }
           >
-            <InstagramIcon />
+            <InstagramIcon sx={{fontSize: "3rem"}}/>
           </ExternalLink>
         </div>
       </div>
@@ -42,7 +42,7 @@ const LinksContacts = () => {
               "https://hu.pinterest.com/szgpostalada/?fbclid=IwAR0RgNU_HBBcrEAI7kwx_3eVBeXnvGYLsYSwz014hhrZiPiUEVk1u1I8s2Y"
             }
           >
-            <PinterestIcon />
+            <PinterestIcon sx={{fontSize: "3rem", color: "#bd081c"}}/>
           </ExternalLink>
 
           <ExternalLink
@@ -58,7 +58,7 @@ const LinksContacts = () => {
         <h3>Music</h3>
         <div className={styles.icons}>
           <ExternalLink url={"https://www.youtube.com/SzaboJGergely"}>
-            <YouTubeIcon />
+            <YouTubeIcon sx={{fontSize: "3rem", color: "#ff0000"}}/>
           </ExternalLink>
           {/* <ExternalLink
           url={"https://szgdd-dalok.blogspot.hu/?fbclid=IwAR3AV2Hnz03s-ZlJ-JQeVlvfRqJnHwUE-0vN7ZRGBSioRt4QMAYcjhxhJs8"}

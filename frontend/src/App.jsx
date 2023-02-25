@@ -24,7 +24,7 @@ function App() {
   console.log(windowWidth);
 
   return (
-    <div className="App">{windowWidth > 767 ? <Layout1 /> : <Layout2 />}</div>
+    <div className="App">{windowWidth > 767 ? <Layout1 {...{windowWidth}}/> : <Layout2 {...{windowWidth}}/>}</div>
   );
 }
 

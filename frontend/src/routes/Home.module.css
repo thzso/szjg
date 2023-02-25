@@ -8,6 +8,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 #name {
@@ -29,9 +30,9 @@
 
 @media screen and (max-width: 767px) {
 
-  .home{
+  /* .home{
     height: 100vh;
-  }
+  } */
   #name{
     color: white;
     bottom: 2vh;

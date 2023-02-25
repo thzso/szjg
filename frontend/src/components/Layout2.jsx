@@ -6,7 +6,7 @@ import CancelIcon from "@mui/icons-material/Cancel";
 
 import styles from "./Layout2.module.css";
 
-const Layout2 = () => {
+const Layout2 = ({windowWidth}) => {
   const [open, setOpen] = useState(false);
   console.log(open);
   return (
@@ -20,7 +20,7 @@ const Layout2 = () => {
       <Sidebar/>
       }
       <div className="app_outlet">
-        <Outlet></Outlet>
+        <Outlet context={{windowWidth: windowWidth}}></Outlet>
       </div>
     </>
   );

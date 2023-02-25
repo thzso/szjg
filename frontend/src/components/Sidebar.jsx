@@ -17,7 +17,7 @@ const Sidebar = () => {
         className={({ isActive }) =>
           isActive ? styles.activeStyle : styles.navLink
         }
-        to={"/etchings"}
+        to={"etchings"}
       >
         Etchings
       </NavLink>
@@ -26,7 +26,7 @@ const Sidebar = () => {
         className={({ isActive }) =>
           isActive ? styles.activeStyle : styles.navLink
         }
-        to={"/paintings"}
+        to={"paintings"}
       >
         Paintings
       </NavLink>
@@ -35,7 +35,7 @@ const Sidebar = () => {
         className={({ isActive }) =>
           isActive ? styles.activeStyle : styles.navLink
         }
-        to={"/digital"}
+        to={"digital"}
       >
         Digital
       </NavLink>
@@ -44,7 +44,7 @@ const Sidebar = () => {
         className={({ isActive }) =>
           isActive ? styles.activeStyle : styles.navLink
         }
-        to={"/comics"}
+        to={"comics"}
       >
         Comics
       </NavLink>
@@ -53,11 +53,11 @@ const Sidebar = () => {
         className={({ isActive }) =>
           isActive ? styles.activeStyle : styles.navLink
         }
-        to={"/links&contacts"}
+        to={"links&contacts"}
       >
         Links & Contacts
       </NavLink>
-      
+
     </div>
   );
 };

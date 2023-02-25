@@ -21,23 +21,23 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/etchings",
+        path: "etchings",
         element: <Etchings />,
       },
       {
-        path: "/paintings",
+        path: "paintings",
         element: <Paintings />,
       },
       {
-        path: "/digital",
+        path: "digital",
         element: <Digital />,
       },
       {
-        path: "/comics",
+        path: "comics",
         element: <Comics />,
       },
       {
-        path: "/links&contacts",
+        path: "links&contacts",
         element: <LinksContacts />,
       },
     ],
