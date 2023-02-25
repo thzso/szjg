@@ -20,22 +20,15 @@ function App() {
       </div>
 
       <div className="app_sideBar">
-        <div className="app_linksContainer">
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "active" : undefined
-            }
-            to={"/"}
-          >
-            Home
-          </NavLink>
-          <NavLink to={"/etchings"}>Etchings</NavLink>
-          <NavLink to={"/paintings"}>Paintings</NavLink>
-          <NavLink to={"/digital"}>Digital</NavLink>
-          <NavLink to={"/comics"}>Comics</NavLink>
-          <NavLink to={"/links&contacts"}>Links & Contacts</NavLink>
+        {/* <div className="app_linksContainer"> */}
+          <NavLink className="navLink" to={"/"}>Home</NavLink>
+          <NavLink className="navLink" to={"/etchings"}>Etchings</NavLink>
+          <NavLink className="navLink" to={"/paintings"}>Paintings</NavLink>
+          <NavLink className="navLink" to={"/digital"}>Digital</NavLink>
+          <NavLink className="navLink" to={"/comics"}>Comics</NavLink>
+          <NavLink className="navLink" to={"/links&contacts"}>Links & Contacts</NavLink>
           {/* <p>Contact : szgpostalada@gmail.com</p> */}
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );

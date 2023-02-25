@@ -1,9 +1,9 @@
+import DataDisplay from "../components/Datadisplay";
 
-const Paintings= ()=>{
+const Paintings = () => {
+  const urlEnding = "p";
 
-  return(
-    <div></div>
-  )
-}
+  return <DataDisplay {...{ urlEnding }} />;
+};
 
-export default Paintings
+export default Paintings;

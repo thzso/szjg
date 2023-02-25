@@ -1,18 +1,29 @@
 
 #container{
   display: flex;
+  flex-grow: 1;
+  /* flex-direction: column; */
+  /* height: 100vw; */
+  justify-content: space-between;
+  gap: 1rem;
+  
+
+}
+
+#linksContainer{
+  display: flex;
   flex-direction: column;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.cards{
-  border: 1px solid grey;
-}
+
 
 .textUrls{
  
   flex-direction: column;
+ 
 }
+
 
 .icons, .textUrls{
   display: flex;
@@ -26,4 +37,21 @@
 h3{
   text-align: center;
   margin: 0.2rem;
+}
+
+a{
+
+  color: #827F7E;
+}
+a:hover{
+
+  
+}
+
+a:active{
+  color: blue;
+}
+
+#test{
+height: 100vh;
 }

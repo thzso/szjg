@@ -44,6 +44,7 @@ const DataDisplay = ({ urlEnding }) => {
           className="imageContainer"
           onClick={(e) => handleClick(image)}
         >
+      
           {isLoading && (
             <Skeleton variant="rectangular">
               <img
@@ -61,7 +62,9 @@ const DataDisplay = ({ urlEnding }) => {
             src={`http://localhost:8080/${image.filename}`}
             alt=""
           />
+          
         </div>
+      
       ))}
 
       {open && <Popup {...{ clickedImage, setOpen, open }} />}

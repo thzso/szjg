@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,200;1,400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap');
 
-:root {
 
-}
 
 *{
   margin: 0;
@@ -26,11 +24,13 @@ overflow: hidden;
   height: inherit;
 }
 
-.images{
-  max-width: 100%;
-}
+
 
 .dataDisplayContainer{
+
+  
+
+  
 
 padding: 2rem;
 position: relative;
@@ -47,18 +47,28 @@ position: relative;
 }
 
 .imageContainer{
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
 
-  flex-direction: column;
-  align-items: center;
-  max-width: 20%;
+
+  margin: 0.5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* max-width: 13%; */
+    max-width: calc( 100% / 5 - 5vh);
+}
+
+
+
+
+
+
+
+
+  .images{
+    max-width: 100%;
+  }
   
 
-
-}
-
-.skeletonContainer{
-  max-width: 20%;
-}
+  
+  

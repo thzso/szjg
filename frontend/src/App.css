@@ -14,24 +14,35 @@
   background-color: #151414;
   background-color: white;
 }
+.navLink{
 
+  color: #c7c7c7;
+ 
+  padding: 0 0rem 0 5rem;
+}
 .app_sideBar{
 
   /* !!PADDING */
-padding:8vw;
+/* padding:8vw; */
+
+padding-right: 5rem;
 display: flex;
 justify-content: center;
-align-items: center;
+
 flex-direction: column;
-/* background-color: #151414; */
-background-color: #000000f0;
+background-color: #151414;
+/* background-color: #000000f0; */
 color: #c7c7c7;
 font-family: 'Source Sans Pro', sans-serif;
 font-style: normal;
+flex-shrink: 0;
 
 }
-.active{
+.active {
   color: white;
+  border-block-end: 1px solid white;
+  margin-right: auto;
+
 }
 
 .app_linksContainer{
@@ -46,9 +57,12 @@ a{
   text-decoration: none;
   
 
-  color: #c7c7c7
+  /* color: #c7c7c7;
+ 
+  padding: 0 0rem 0 5rem; */
+  /* margin-right: 5rem; */
 }
-a:hover{
+.navLink:hover{
   color: white;
 }
 

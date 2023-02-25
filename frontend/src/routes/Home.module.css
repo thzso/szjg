@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300&display=swap');
 .home{
 height: inherit;
-width: -webkit-fill-available;
+width: 100%;
+/* background-image: url("../assets/images/orfeusz_a_kozlekedesi_muzeumban.jpg"); */
 background-image: url("../assets/images/orfeusz_a_kozlekedesi_muzeumban.jpg");
 background-attachment: fixed;
 background-size: cover;
@@ -9,30 +11,61 @@ background-repeat: no-repeat;
 
 /* max-height: inherit; */
 
-display: flex;
+/* display: flex; */
 
 
 
 }
-h1{
+/* #title{
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  right: 0;
+
+  bottom: 25vh;
+  display: flex;
+  background-color: #00000094;
+  justify-content: flex-end;
+  padding-bottom: 1.8rem;
+
+  
+
+} */
+
+/* How does home module css's span  affects mui skeleton span ? */
+
+#name{
+
+  position: absolute;
+    right: 1px;
+    bottom: 16vh;
+    font-size: 5rem;
+    line-height: 5.2rem;
+    display: inline-block;
+    color: white;
+
+    font-family: 'Noto Serif SC', serif;
+    letter-spacing: 0.5rem;
+    font-weight: 200;
+
+
+
+
   /* position: absolute;
-  right: 0; */
+  right: 0;
 
-  letter-spacing: 0.5rem;
-  padding: 2rem;
+  bottom: 6vh;
   font-size: 6rem;
+  line-height: 5.2rem;
+  display:inline-block;
 
-  /* font-family: 'Open Sans', sans-serif; */
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  /* color: rgb(158, 160, 163); */
-  color:  #c7c7c7;
   color: white;
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'Rubik', sans-serif; */
-
-
-
+  mix-blend-mode: difference;
+  font-family: 'Noto Serif SC', serif;
+  letter-spacing: 0.5rem;
+  font-weight: 200; */
 }
+
+
 
 
