@@ -9,6 +9,9 @@
   font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;
   flex-shrink: 0;
+
+  position: static;
+
 }
 
 a {
@@ -28,5 +31,43 @@ a {
   color: white;
   border-block-end: 1px solid white;
   margin-right: auto;
+
+}
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+  .sideBar{
+    background-color: transparent;
+    color: white;
+    font-size: 34px;
+    position: fixed;
+    top: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow:hidden;
+      z-index: 1;
+      padding: 0;
+     
+      
+  }
+
+  .navLink {
+    padding: 0 0 1rem 0;
+    background-color: #151414e6;
+    text-align: center;
+    
+  }
+
+  .activeStyle {
+    padding: 0 0 1rem 0;
+    margin: 0;
+    border-block-end:none;
+    background-color: #151414e6;
+    text-align: center;
+  }
 
 }

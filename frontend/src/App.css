@@ -26,3 +26,21 @@
 
 
 
+@media screen and (max-width: 767px) {
+.App{
+  flex-direction: column;
+}
+
+.app_outlet{
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+
+  
+
+}
+
+}

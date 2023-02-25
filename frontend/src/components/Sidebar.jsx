@@ -12,6 +12,7 @@ const Sidebar = () => {
       >
         Home
       </NavLink>
+
       <NavLink
         className={({ isActive }) =>
           isActive ? styles.activeStyle : styles.navLink
@@ -20,6 +21,7 @@ const Sidebar = () => {
       >
         Etchings
       </NavLink>
+
       <NavLink
         className={({ isActive }) =>
           isActive ? styles.activeStyle : styles.navLink
@@ -28,6 +30,7 @@ const Sidebar = () => {
       >
         Paintings
       </NavLink>
+
       <NavLink
         className={({ isActive }) =>
           isActive ? styles.activeStyle : styles.navLink
@@ -36,6 +39,7 @@ const Sidebar = () => {
       >
         Digital
       </NavLink>
+
       <NavLink
         className={({ isActive }) =>
           isActive ? styles.activeStyle : styles.navLink
@@ -44,6 +48,7 @@ const Sidebar = () => {
       >
         Comics
       </NavLink>
+
       <NavLink
         className={({ isActive }) =>
           isActive ? styles.activeStyle : styles.navLink
@@ -52,6 +57,7 @@ const Sidebar = () => {
       >
         Links & Contacts
       </NavLink>
+      
     </div>
   );
 };

@@ -1,17 +1,29 @@
-import Sidebar from "./Sidebar"
-import { Outlet } from "react-router-dom"
-import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from "react";
+import Sidebar from "./Sidebar";
+import { Outlet } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
+import CancelIcon from "@mui/icons-material/Cancel";
 
-const Layout2 =()=>{
+import styles from "./Layout2.module.css";
 
-  return(
+const Layout2 = () => {
+  const [open, setOpen] = useState(false);
+  console.log(open);
+  return (
     <>
-    <MenuIcon />
-    <div className="app_outlet">
-      <Outlet></Outlet>
-    </div>
-  </>
-  )
-}
+      <div className={open ? styles.menuClose : styles.menuOpen} onClick={() => setOpen(!open)}>
+        {open? <CancelIcon sx={{fontSize: "34px"}}/>: <MenuIcon sx={{fontSize: "34px"}}/>}
+        
+      </div>
+      {open && 
+      
+      <Sidebar/>
+      }
+      <div className="app_outlet">
+        <Outlet></Outlet>
+      </div>
+    </>
+  );
+};
 
-export default Layout2
+export default Layout2;

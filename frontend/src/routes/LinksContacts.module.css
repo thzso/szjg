@@ -42,9 +42,9 @@ a {
 }
 
 
-a:active {
+/* a:active {
   color: blue;
-}
+} */
 
 #test {
   height: 100vh;

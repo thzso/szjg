@@ -23,3 +23,17 @@
 .images {
   max-width: 100%;
 }
+
+@media screen and (max-width: 767px) {
+
+  .imageContainer {
+    max-width: 100vw;
+  }
+  .dataDisplayContainer {
+    display: block;
+
+  }
+
+
+
+}
