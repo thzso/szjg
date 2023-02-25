@@ -1,13 +1,8 @@
-import DataDisplay from "../components/DataDisplay"
+import DataDisplay from "../components/DataDisplay";
 
 const Comics = () => {
+  const urlEnding = "c";
+  return <DataDisplay {...{ urlEnding }} />;
+};
 
-  const urlEnding ="c"
-  return(
-
-<DataDisplay {...{urlEnding}}/>
- 
-  )
-}
-
-export default Comics
+export default Comics;

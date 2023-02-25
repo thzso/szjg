@@ -1,13 +1,9 @@
-import DataDisplay from "../components/Datadisplay"
+import DataDisplay from "../components/Datadisplay";
 
+const Etchings = () => {
+  const urlEnding = "a";
 
-const Etchings =()=>{
+  return <DataDisplay {...{ urlEnding }} />;
+};
 
-  const urlEnding = "a"
-
-  return(
-    <DataDisplay {...{urlEnding}}/>
-  )
-}
-
-export default Etchings
+export default Etchings;

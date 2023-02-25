@@ -1,12 +1,8 @@
-import DataDisplay from "../components/Datadisplay"
+import DataDisplay from "../components/Datadisplay";
 
+const Digital = () => {
+  const urlEnding = "d";
+  return <DataDisplay {...{ urlEnding }} />;
+};
 
-const Digital =() =>{
-
-  const urlEnding = "d"
-  return(
-    <DataDisplay {...{urlEnding}}/>
-  )
-}
-
-export default Digital
+export default Digital;

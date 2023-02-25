@@ -1,0 +1,32 @@
+
+.sideBar {
+  padding-right: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #151414;
+  color: #c7c7c7;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  flex-shrink: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navLink {
+  color: #c7c7c7;
+  padding: 0 0rem 0 5rem;
+}
+.navLink:hover {
+  color: white;
+}
+
+.activeStyle {
+  padding: 0 0rem 0 5rem;
+  color: white;
+  border-block-end: 1px solid white;
+  margin-right: auto;
+
+}

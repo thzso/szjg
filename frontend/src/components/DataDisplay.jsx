@@ -1,11 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Popup from "./Popup";
 import { Skeleton } from "@mui/material";
+import styles from "./DataDisplay.module.css"
 
 const DataDisplay = ({ urlEnding }) => {
-  //mi az a usecallback? mi ez? :https://devtrium.com/posts/async-functions-useeffect
-
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
   const [open, setOpen] = useState(false);
@@ -37,18 +36,17 @@ const DataDisplay = ({ urlEnding }) => {
   }, [loadedImages]);
 
   return (
-    <div className="dataDisplayContainer">
+    <div className={styles.dataDisplayContainer}>
       {data.map((image, i) => (
         <div
           key={i}
-          className="imageContainer"
+          className={styles.imageContainer}
           onClick={(e) => handleClick(image)}
         >
-      
           {isLoading && (
             <Skeleton variant="rectangular">
               <img
-                className="images"
+                className={styles.images}
                 src={`http://localhost:8080/${image.filename}`}
                 alt=""
               />
@@ -58,13 +56,11 @@ const DataDisplay = ({ urlEnding }) => {
           <img
             style={{ display: isLoading ? "none" : "block" }}
             onLoad={() => handleOnload(image.filename)}
-            className="images"
+            className={styles.images}
             src={`http://localhost:8080/${image.filename}`}
             alt=""
           />
-          
         </div>
-      
       ))}
 
       {open && <Popup {...{ clickedImage, setOpen, open }} />}
